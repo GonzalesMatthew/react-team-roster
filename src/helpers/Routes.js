@@ -7,6 +7,14 @@ export default function Routes() {
     <div>
       <Switch>
         <Route exact path='/' component={Home} />
+        <Route
+          path='/racers/'
+          component{}
+        />
+        <Route
+          path='/add-racer'
+          component{}
+        />
       </Switch>
     </div>
   );
