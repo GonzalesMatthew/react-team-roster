@@ -1,18 +1,21 @@
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
   Button,
   Card,
   CardText,
   CardTitle
 } from 'reactstrap';
-import PropTypes from 'prop-types';
 import { deleteRacer } from '../helpers/data/RosterData';
+import RacerForm from './RacerForm';
 
 const RacerCard = ({
   firebaseKey,
   imageUrl,
   fullName,
   team,
+  setRacers
 }) => {
   const [editing, setEditing] = useState(false);
   const history = useHistory();
@@ -47,7 +50,7 @@ const RacerCard = ({
           {
             editing && <RacerForm
               formTitle='Edit Racer'
-              setStudents={setRacers}
+              setRacers={setRacers}
               firebaseKey={firebaseKey}
               fullName={fullName}
               team={team}
@@ -62,6 +65,7 @@ RacerCard.propTypes = {
   firebaseKey: PropTypes.string.isRequired,
   fullName: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
-  team: PropTypes.string.isRequired
+  team: PropTypes.string.isRequired,
+  setRacers: PropTypes.func
 };
 export default RacerCard;

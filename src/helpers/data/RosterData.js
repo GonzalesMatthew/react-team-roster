@@ -33,4 +33,12 @@ const updateRacer = (racer) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getRacers, addRacer, deleteRacer, updateRacer };
+const getSingleRacer = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/racers/${firebaseKey}.json`)
+    .then((racer) => resolve(racer.data))
+    .catch((error) => reject(error));
+});
+
+export {
+  getRacers, addRacer, deleteRacer, updateRacer, getSingleRacer
+};
