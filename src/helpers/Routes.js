@@ -42,7 +42,7 @@ export default function Routes({ user, racers, setRacers }) {
           component={SingleRacer}
         />
         <PrivateRoute
-          path='add-racers'
+          path='/add-racers'
           user={user}
           component={() => <AddRacer setRacers={setRacers} />}
         />

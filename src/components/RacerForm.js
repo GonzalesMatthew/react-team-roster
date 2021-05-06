@@ -37,7 +37,7 @@ const RacerForm = (
     } else {
       addRacer(racer).then((response) => {
         setRacers(response);
-        history.push('/racers);');
+        history.push('/racers');
       });
     }
   };
