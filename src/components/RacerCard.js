@@ -15,7 +15,8 @@ const RacerCard = ({
   imageUrl,
   fullName,
   team,
-  setRacers
+  setRacers,
+  user
 }) => {
   const [editing, setEditing] = useState(false);
   const history = useHistory();
@@ -30,7 +31,7 @@ const RacerCard = ({
         setEditing((prevState) => !prevState);
         break;
       case 'view':
-        history.push(`/racers/${firebaseKey}`);
+        history.push(`/drivers/${firebaseKey}`);
         break;
       default:
         console.warn('nothing selected');
@@ -41,11 +42,11 @@ const RacerCard = ({
     <Card body>
           <CardTitle tag="h5">{fullName}</CardTitle>
           <CardText>Team: {team}</CardText>
-          <CardText>{imageUrl}</CardText>
-          <Button color="warning" onClick={() => handleClick('view')}>View Racer</Button>
-          <Button color="danger" onClick={() => handleClick('delete')}>Delete Racer</Button>
+          <img width="200" src={imageUrl} alt="Driver's photograph"/>
+          <Button color="warning" onClick={() => handleClick('view')}>View Driver</Button>
+          <Button color="danger" onClick={() => handleClick('delete')}>Delete Driver</Button>
           <Button color="info" onClick={() => handleClick('edit')}>
-            {editing ? 'Close Form' : 'Edit Racer'}
+            {editing ? 'Close Form' : 'Edit Driver'}
           </Button>
           {
             editing && <RacerForm
@@ -55,6 +56,7 @@ const RacerCard = ({
               fullName={fullName}
               team={team}
               imageUrl={imageUrl}
+              user={user}
             />
           }
     </Card>
@@ -66,6 +68,7 @@ RacerCard.propTypes = {
   fullName: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   team: PropTypes.string.isRequired,
-  setRacers: PropTypes.func
+  setRacers: PropTypes.func,
+  user: PropTypes.any
 };
 export default RacerCard;

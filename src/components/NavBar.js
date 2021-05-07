@@ -20,10 +20,10 @@ const NavBar = ({ user }) => {
   const authenticated = () => (
     <>
       <NavItem>
-        <Link className="nav-link" to="/add-racers/">Add Racers</Link>
+        <Link className="nav-link" to="/add-drivers/">Add Driver</Link>
       </NavItem>
       <NavItem>
-        <Link className="nav-link" to="/racers">Racers</Link>
+        <Link className="nav-link" to="/drivers">Drivers</Link>
       </NavItem>
     </>
   );

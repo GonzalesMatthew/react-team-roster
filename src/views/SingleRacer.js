@@ -16,11 +16,10 @@ export default function SingleRacer() {
 
   return (
     <div>
-      <h1>Racer Info</h1>
+      <h1>Driver Info</h1>
       <h2>{racer.fullName}</h2>
       <h3>{racer.team}</h3>
-      <h3>{racer.imageUrl}</h3>
-      <h3>{racer.imageUrl}</h3>
+      <img width="200" src={racer.imageUrl}/>
     </div>
   );
 }

@@ -31,20 +31,20 @@ export default function Routes({ user, racers, setRacers }) {
         <Route exact path='/' component={Home} />
         <PrivateRoute
           exact
-          path='/racers'
+          path='/drivers'
           user={user}
           component={() => <Racers racers={racers}
-          setRacers={setRacers} />}
+          setRacers={setRacers} user={user}/>}
         />
         <PrivateRoute
-          path='/racers/:firebaseKey'
+          path='/drivers/:firebaseKey'
           user={user}
           component={SingleRacer}
         />
         <PrivateRoute
-          path='/add-racers'
+          path='/add-drivers'
           user={user}
-          component={() => <AddRacer setRacers={setRacers} />}
+          component={() => <AddRacer setRacers={setRacers} user={user}/>}
         />
         <Route path='*' component = {NotFound} />
       </Switch>

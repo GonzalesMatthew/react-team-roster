@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RacerCard from '../components/RacerCard';
 
-function Racers({ racers, setRacers }) {
+function Racers({ racers, setRacers, user }) {
   return (
     <>
       <div className="card-container">
@@ -15,6 +15,7 @@ function Racers({ racers, setRacers }) {
             imageUrl={racerInfo.imageUrl}
             uid={racerInfo.uid}
             setRacers={setRacers}
+            user={user}
           />
         ))}
       </div>
@@ -24,7 +25,8 @@ function Racers({ racers, setRacers }) {
 
 Racers.propTypes = {
   racers: PropTypes.array.isRequired,
-  setRacers: PropTypes.func.isRequired
+  setRacers: PropTypes.func.isRequired,
+  user: PropTypes.any
 };
 
 export default Racers;
