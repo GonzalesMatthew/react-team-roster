@@ -1,0 +1,15 @@
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  margin: 20px 15px;
+}
+
+.card img {
+  margin: auto;
+  width: 200px;
+}

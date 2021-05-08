@@ -10,8 +10,8 @@ const RacerForm = (
     imageUrl,
     fullName,
     team,
-    firebaseKey
-    // uid
+    firebaseKey,
+    user
   }
 ) => {
   const history = useHistory();
@@ -20,7 +20,8 @@ const RacerForm = (
     imageUrl: imageUrl || '',
     fullName: fullName || '',
     team: team || 0,
-    firebaseKey: firebaseKey || null
+    firebaseKey: firebaseKey || null,
+    uid: user.uid
   });
 
   const handleInputChange = (e) => {
@@ -37,7 +38,7 @@ const RacerForm = (
     } else {
       addRacer(racer).then((response) => {
         setRacers(response);
-        history.push('/racers');
+        history.push('/drivers');
       });
     }
   };
@@ -88,7 +89,8 @@ RacerForm.propTypes = {
   imageUrl: PropTypes.string,
   fullName: PropTypes.string,
   team: PropTypes.string,
-  firebaseKey: PropTypes.string
+  firebaseKey: PropTypes.string,
+  user: PropTypes.any
 };
 
 export default RacerForm;
