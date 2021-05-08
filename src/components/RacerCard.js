@@ -42,7 +42,7 @@ const RacerCard = ({
     <Card body>
           <CardTitle tag="h5">{fullName}</CardTitle>
           <CardText>Team: {team}</CardText>
-          <img width="200" src={imageUrl} alt="Driver's photograph"/>
+          <img src={imageUrl} alt="Driver's photograph"/>
           <Button color="warning" onClick={() => handleClick('view')}>View Driver</Button>
           <Button color="danger" onClick={() => handleClick('delete')}>Delete Driver</Button>
           <Button color="info" onClick={() => handleClick('edit')}>

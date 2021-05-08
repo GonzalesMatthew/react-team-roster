@@ -31,7 +31,7 @@ const NavBar = ({ user }) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">React</NavbarBrand>
+        <NavbarBrand href="/">F1 Driver Management</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

@@ -19,7 +19,7 @@ export default function SingleRacer() {
       <h1>Driver Info</h1>
       <h2>{racer.fullName}</h2>
       <h3>{racer.team}</h3>
-      <img width="200" src={racer.imageUrl}/>
+      <img src={racer.imageUrl}/>
     </div>
   );
 }

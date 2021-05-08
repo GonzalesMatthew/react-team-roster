@@ -6,7 +6,7 @@ function AddRacer({ setRacers, user }) {
   return (
     <div>
       <RacerForm
-        formTitle="Form Name"
+        formTitle="New Driver"
         setRacers={setRacers}
         user={user}
       />
