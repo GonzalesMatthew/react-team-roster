@@ -10,10 +10,8 @@ The F1 stewards want a way to manage the season's driver roster. Using React I b
   Built with React!
   Two pages! One to add new drivers with a form, the other containing cards of all existing drivers. Cards contain the driver name, team name, photograph, and edit and delete buttons for the card. Also a view button to see that card individually.
 ### Screenshots of your project
-![App Screenshot](pics/tank.png)
-![App Screenshot](pics/grave.png)
-
+![App Screenshot](img/react-f1-app.png)
 ### List of contributors and links to their GH profiles
 @GonzalesMatthew
 ### Link to Loom video walkthrough of your app
-[App-Walkthrough Video](https://www.loom.com/share/4a38278f851445d0b18636e053bc6fb7)
+[App-Walkthrough Video](https://www.loom.com/share/d916363f4e804498a58c7710925ed5d0)
