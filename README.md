@@ -4,6 +4,8 @@ The F1 stewards want a way to manage the season's driver roster. Using React I b
   [Wireframe](https://www.figma.com/file/jLN5U6Yw6xGPzeTpgVKFyI/Untitled?node-id=1%3A9)
 ### Link to the deployed project
   [Deployed Project](https://mg-react-team-roster.netlify.app/)
+### Link to your project board
+  [Project Board](https://github.com/GonzalesMatthew/react-team-roster/projects/1)
 ### Description of the user
   Users who want to monitor and update the current roster of F1 drivers
 ### List of features                                                
